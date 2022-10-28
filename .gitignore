@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /bazel-out
+package-lock.json
+.vscode
 
 # Node
 /node_modules
