@@ -1,0 +1,11 @@
+.ingredients-title {
+  font-weight: 600;
+}
+
+.image-wrapp>div {
+  height: 360px;
+}
+
+.image-wrapp img {
+  max-width: auto;
+}

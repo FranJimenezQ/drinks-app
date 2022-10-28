@@ -1,0 +1,58 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="https://img.freepik.com/free-vector/watercolor-cocktail-collection_52683-41381.jpg?w=2000" alt="" class="card-img-top">
+      <div class="card card-body">
+        <form (submit)="submitDrinkName( drinkName )">
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Licor name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #drinkName>
+          </div>
+            <button  type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Show Drinks</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div *ngFor="let d of dataDrinks; let i = index" class="card card-body accordion" id="accordionExample">
+        <button class="accordion-button btn btn-light" type="button" data-bs-toggle="collapse"  [attr.data-bs-target]="'#collapse_' + i" aria-expanded="true" [attr.aria-controls]="'collapse_'+i">
+          <h4 class="card-subtitle">Drink : {{d.strDrink}}</h4>
+        </button>
+        <div [id]="'collapse_'+i" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <h5 class="card-subtitle mb-2 text-muted">Category :</h5>
+            <p class="card-text">{{d.strCategory}}</p>
+            <h5 class="card-subtitle mb-2 text-muted">Instructions :</h5>
+            <p class="card-text">{{d.strInstructions}}</p>
+            <div class="image-wrapp py-3">
+              <h5 class="card-subtitle mb-2 text-muted">Image : </h5>
+              <div class="d-inline-flex align-items-strech border border-primary border-4">
+                <img class="rounded mx-auto d-block" [src]="d?.strDrinkThumb" alt="a drink image" >
+              </div>
+            </div>
+            <h5 class="card-subtitle mb-2 text-muted">Ingredients</h5>
+            <p class="card-text">Ingredient 1 : {{d.strIngredient1}}</p>
+            <p class="card-text">Ingredient 2 : {{d.strIngredient2}}</p>
+            <p class="card-text">Ingredient 3 : {{d.strIngredient3}}</p>
+            <p class="card-text">Ingredient 4 : {{d.strIngredient4}}</p>
+            <p class="card-text">Ingredient 5 : {{d.strIngredient5}}</p>
+            <p class="card-text">Ingredient 6 : {{d.strIngredient6}}</p>
+            <p class="card-text">Ingredient 7 : {{d.strIngredient7}}</p>
+            <p class="card-text">Ingredient 8 : {{d.strIngredient8}}</p>
+            <p class="card-text">Ingredient 9 : {{d.strIngredient9}}</p>
+            <p class="card-text">Ingredient 10 : {{d.strIngredient10}}</p>
+            <p class="card-text">Ingredient 11 : {{d.strIngredient11}}</p>
+            <p class="card-text">Ingredient 12 : {{d.strIngredient12}}</p>
+            <p class="card-text">Ingredient 13 : {{d.strIngredient13}}</p>
+            <p class="card-text">Ingredient 14 : {{d.strIngredient14}}</p>
+            <p class="card-text">Ingredient 15 : {{d.strIngredient15}}</p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
